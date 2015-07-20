@@ -1,0 +1,68 @@
+# Ignore npm packaging
+/.node_modules
+/node_modules
+
+# Ingore bower_components
+/bower_components
+
+# ignore config files
+/config
+
+# Ignore all logfiles and tempfiles.
+*.log
+/tmp
+.tmp
+.sass_cache
+
+*.gem
+.sass-cache
+bootstrap.css
+bootstrap-responsive.css
+Gemfile.lock
+.rvmrc
+.rbenv-version
+
+# Ignore bundler config
+/.bundle
+/vendor/cache
+/vendor/bundle
+tmp/
+test/screenshots/
+test/dummy/log/*.log
+
+## Ignore all generated files
+/coverage
+/rdoc
+/wiki
+/packaging
+npm-debug.log
+*.tmproj
+azure_error
+what
+*.sublime-workspace
+build/index.html
+
+# Numerous always-ignore extensions
+*~
+*.diff
+*.patch
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+.tmproj
+nbproject
+Thumbs.db
+
+.ruby-version
