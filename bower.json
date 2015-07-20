@@ -1,0 +1,21 @@
+{
+  "name": "fire-notes",
+  "version": "0.0.2-index",
+  "homepage": "https://github.com/unthunk/fire-notes",
+  "authors": [
+    "Lucas Myers <lucas@unthunk.com>"
+  ],
+  "description": "real-time collaborative note taking app using firebase",
+  "main": "app/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "firebase": "~2.2.7"
+  }
+}
