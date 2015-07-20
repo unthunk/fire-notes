@@ -28,5 +28,8 @@ function updateNote(name,content) {
   // exist firebase will create a new node for it when we save or update it
   var note = notesRef.child(name);
 
-  note.update({'content': content});
+  // let's try a transaction instead
+  note.transaction(function(currentData){
+    return {content: content};
+  });
 }
