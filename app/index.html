@@ -7,10 +7,29 @@
 </head>
 <body>
 
+  <!-- login form -->
+  <div class="login">
+    <form class="login-form" action="#">
+      <div>
+        <label for="email">email:</label>
+        <input name="email" id="email" type="email" placeholder="email@example.com">
+      </div>
+      <div>
+        <label for="password">password:</label>
+        <input name="password" id="password" type="password" placeholder="********">
+      </div>
+      <div>
+        <button type="submit" class="login-button">log in</button>
+        <a href="#" class="register-link">register</a>
+      </div>
+    </form>
+  </div>
 
-  <!-- a simple note -->
-  <div contenteditable="true" class="note-content" data-note-name="foo">
-    this is the foo note
+  <div class="note">
+    <!-- a simple note -->
+    <div contenteditable="true" class="note-content" data-note-name="foo">
+      this is the foo note
+    </div>
   </div>
 
 
