@@ -13,30 +13,42 @@
 </head>
 <body>
 
-  <!-- login form -->
-  <div class="login">
-    <form class="login-form" action="#">
-      <div>
-        <label for="email">email:</label>
-        <input name="email" id="email" type="email" placeholder="email@example.com">
+
+  <!--  navbar -->
+  <nav class="navbar navbar-default" ng-controller="navbarCtrl">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">fire notes</a>
       </div>
-      <div>
-        <label for="password">password:</label>
-        <input name="password" id="password" type="password" placeholder="********">
-      </div>
-      <div>
-        <button type="submit" class="login-button">log in</button>
-        <a href="#" class="register-link">register</a>
-      </div>
-    </form>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#/notes">my notes</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li ng-show="authData"><a href="#/me"><i class="citrix-icon citrix-icon-person"></i> <span ng-bind="profile.name"></span></a></li>
+          <li ng-show="!authData"><a href="">sign in</a>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+
+  <div class="notes-app" ng-view>
+
   </div>
 
-  <div class="note">
-    <!-- a simple note -->
-    <div contenteditable="true" class="note-content" data-note-name="foo">
-      this is the foo note
-    </div>
-  </div>
+
 
 
   <!-- config file for demo -->
@@ -45,8 +57,14 @@
   <!-- firebase -->
   <script src="bower_components/firebase/firebase.js"></script>
 
+  <!-- angular -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
   <!-- app -->
   <script src="app/app.js"></script>
+  <script src="app/components/navbar/navbar.js"></script>
+  <script src="app/views/main/main.js"></script>
 
 </body>
 </html>

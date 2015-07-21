@@ -4,8 +4,3 @@
   overflow: auto;
   background-color: #eee;
 }
-
-.login-form label {
-  display: inline-block;
-  width: 75px;
-}
