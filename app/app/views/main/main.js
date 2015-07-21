@@ -2,9 +2,9 @@
 
 /* global app */
 
-
+// include $location
 app.controllers
-  .controller('mainCtrl', ['$scope', 'Auth', function ($scope, Auth) {
+  .controller('mainCtrl', ['$scope', 'Auth', '$location', function ($scope, Auth, $location) {
 
     // bind these to inputs on login/register form
     $scope.user = {
@@ -25,9 +25,10 @@ app.controllers
 
       Auth.login($scope.user)
       .then(function(authData){
-
-        // after the user logs in what do we want to do?
         console.log('logged in',authData);
+
+        // after the user logs in what do we want to do? show then thier notes
+        $location.path('/notes');
 
       })
       .catch(function(error){
@@ -41,9 +42,10 @@ app.controllers
 
       Auth.register($scope.user)
       .then(function(authData){
-
-        // after the user registers what do we want to do?
         console.log('user', authData);
+
+        // after the user registers what do we want to do? send them to their first note
+        $location.path('/note');        
 
       }, function(error){
         // do things if failure
