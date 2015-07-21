@@ -12,7 +12,6 @@ var app = {
   services: angular.module('notesAppServices', [])
 };
 
-// add note route to incude a note name
 var notesApp = angular.module(app.name, ['notesAppControllers', 'notesAppServices', 'ngRoute', 'firebase'])
 
   .config(['$routeProvider' ,function ($routeProvider) {
