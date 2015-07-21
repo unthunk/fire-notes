@@ -12,7 +12,7 @@ var app = {
   services: angular.module('notesAppServices', [])
 };
 
-// add note and notes routes
+// add note route to incude a note name
 var notesApp = angular.module(app.name, ['notesAppControllers', 'notesAppServices', 'ngRoute', 'firebase'])
 
   .config(['$routeProvider' ,function ($routeProvider) {
@@ -22,6 +22,10 @@ var notesApp = angular.module(app.name, ['notesAppControllers', 'notesAppService
         templateUrl: 'app/views/main/main.html'
       })
       .when('/note', {
+        controller: 'noteCtrl',
+        templateUrl: 'app/views/note/note.html'
+      })
+      .when('/note/:item', {
         controller: 'noteCtrl',
         templateUrl: 'app/views/note/note.html'
       })

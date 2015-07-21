@@ -2,7 +2,6 @@
 
 /* global app */
 
-
 app.controllers
 .controller('navbarCtrl', ['$scope', 'Auth', function ($scope, Auth) {
   $scope.profile = {
@@ -10,9 +9,8 @@ app.controllers
     email: ''
   };
 
-  // we want to be able to tell if a user is logged in or not
   $scope.auth = Auth.authObj;
-  // $onAuth listens for changes to the client's authentication state
+
   $scope.auth.$onAuth(function(authData) {
     $scope.authData = authData;
     if (authData) {
