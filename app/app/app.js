@@ -6,12 +6,14 @@ var ref = new Firebase(firebase);
 
 /* global angular */
 
+// add services to our app and inject
 var app = {
   name: 'fireNotesApp',
-  controllers: angular.module('notesAppControllers', [])
+  controllers: angular.module('notesAppControllers', []),
+  services: angular.module('notesAppServices', [])
 };
 
-var notesApp = angular.module(app.name, ['notesAppControllers','ngRoute'])
+var notesApp = angular.module(app.name, ['notesAppControllers', 'notesAppServices', 'ngRoute', 'firebase'])
 
   .config(['$routeProvider' ,function ($routeProvider) {
     $routeProvider

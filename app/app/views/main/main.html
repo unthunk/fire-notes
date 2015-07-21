@@ -1,19 +1,26 @@
 <div class="container">
   <div class="row">
     <!-- login form -->
-    <div class="login">
-      <form class="login-form" action="#">
+
+    <!-- we can use authData to determine if we should show the login/registration form -->
+    <div class="login" ng-show="!authData">
+
+      <!-- submitting the login form will trigger out login() method in the main controller -->
+      <form class="login-form" ng-submit="login()">
         <div class="form-group">
           <label for="email">email:</label>
-          <input name="email" id="email" type="email" class="form-control" placeholder="email@example.com">
+          <!--  bind inputs to main $scope -->
+          <input name="email" id="email" ng-model="user.email" type="email" class="form-control" placeholder="email@example.com" required="" >
         </div>
         <div class="form-group">
           <label for="password">password:</label>
-          <input name="password" id="password" type="password" class="form-control" placeholder="********">
+          <!--  bind inputs to main $scope -->
+          <input name="password" id="password" ng-model="user.password" type="password" class="form-control" placeholder="********" required="">
         </div>
         <div>
           <button type="submit" class="btn btn-primary login-button">log in</button>
-          <a href="#" class="btn register-link">register</a>
+          <!-- call register method in main controller -->
+          <a href="#" ng-click="register()" class="btn register-link">register</a>
         </div>
       </form>
     </div>
