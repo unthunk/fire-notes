@@ -1,1 +1,18 @@
-<p>show list of notes here</p>
+<div class="container">
+  <div class="row">
+    <div>
+      <div ng-repeat="note in notes" class="col-md-3">
+        <div class="panel note-card">
+          <div class="panel-heading">
+            <h4><a ng-href="#/note/{{note.$id}}" ng-bind="note.title"></a></h4>
+          </div>
+          <div class="panel-body">
+            <div ng-bind-html="note.text | linebreaks | unsafe"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

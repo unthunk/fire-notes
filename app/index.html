@@ -8,6 +8,9 @@
   <title>fire notes</title>
 
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- include firepad and codemirror css -->
+  <link rel="stylesheet" href="bower_components/firepad/dist/firepad.css">
+  <link rel="stylesheet" href="bower_components/codemirror/lib/codemirror.css" />
   <link rel="stylesheet" href="css/app.css">
 
 </head>
@@ -58,6 +61,12 @@
   <!-- firebase -->
   <script src="bower_components/firebase/firebase.js"></script>
 
+  <!-- codeMirror -->
+  <script src="bower_components/codemirror/lib/codemirror.js"></script>
+
+  <!-- firepad -->
+  <script src="bower_components/firepad/dist/firepad.js"></script>
+
   <!-- angular -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
@@ -66,12 +75,14 @@
   <!-- app -->
   <script src="app/app.js"></script>
   <script src="app/services/auth.js"></script>
-  <!-- include notes service -->
   <script src="app/services/notes.js"></script>
   <script src="app/components/navbar/navbar.js"></script>
   <script src="app/views/main/main.js"></script>
   <script src="app/views/note/note.js"></script>
   <script src="app/views/notes/notes.js"></script>
+  <!-- filters for notes -->
+  <script src="app/filters/linebreaks.js"></script>
+  <script src="app/filters/unsafe.js"></script>
 
 </body>
 </html>

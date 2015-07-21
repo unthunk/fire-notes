@@ -1,1 +1,26 @@
-<p>show a note here</p>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <div class="form-group note-title">
+
+          <h1>
+            <input type="text" class="form-control note-title-input" placeholder="{{placeholder}}" id="note-title" ng-model="data.title" ng-blur="blurTitle()" ng-hide="!editingTitle">
+            <a href="#" ng-click="editTitle($event)" class="title-span" ng-hide="editingTitle"><span ng-bind="titleText()"></span> <i class="citrix-icon citrix-icon-edit" ></i></a>
+          </h1>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+
+      <div id="firepad-container">
+      </div>
+
+    </div>
+  </div>
+</div>

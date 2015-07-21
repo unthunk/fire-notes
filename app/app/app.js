@@ -9,10 +9,11 @@ var ref = new Firebase(firebase);
 var app = {
   name: 'fireNotesApp',
   controllers: angular.module('notesAppControllers', []),
-  services: angular.module('notesAppServices', [])
+  services: angular.module('notesAppServices', []),
+  filters: angular.module('notesAppFilters', [])
 };
 
-var notesApp = angular.module(app.name, ['notesAppControllers', 'notesAppServices', 'ngRoute', 'firebase'])
+var notesApp = angular.module(app.name, ['notesAppControllers', 'notesAppServices', 'notesAppFilters', 'ngRoute', 'firebase'])
 
   .config(['$routeProvider' ,function ($routeProvider) {
     $routeProvider
